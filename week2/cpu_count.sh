@@ -14,5 +14,7 @@ grep rocessor /proc/cpuinfo
 # pipe | is used to join the output of one comand as input to another
 
 echo "The number of cores is "
-grep processor /proc/cpuinfo | wc -l
+cnt=`grep processor /proc/cpuinfo | wc -l`
 
+echo "The number of cores is " $cnt
+ 
