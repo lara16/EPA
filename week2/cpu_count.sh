@@ -19,6 +19,7 @@ cnt=`grep processor /proc/cpuinfo | wc -l`
 echo "The number of cores is " $cnt
 
 #-ge is used for greater or equal to 
+#cnt is used to print output like $1 
  
 if [ $cnt -ge $1 ]; then
    echo "The install can proceed"
