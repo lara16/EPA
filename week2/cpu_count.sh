@@ -24,3 +24,9 @@ echo "The number of cores is " $cnt
 if [ $cnt -ge $1 ]; then
    echo "The install can proceed"
 fi 
+
+cnt=$(grep process /proc/cpuinfo | wc -l)
+
+if [ $cnt -lt $1 ]; then
+    echo "Insufficient CPUs, install abandoned"
+fi
